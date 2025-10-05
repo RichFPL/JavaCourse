@@ -58,5 +58,6 @@ public class Tasks {
         System.out.println("Swap place");
         System.out.println("AB = " + ab);
         System.out.println("AC = " + ac);
+        System.out.println("Trying to commit to git");
     }
 }
