@@ -1,4 +1,4 @@
-package lesson_2_java_basics_github;
+package lessons_java_basics_github;
 // В Джаве ВСЕ ОБЪЕКТ
 // НЕЛЬЗЯ НАПИСАТЬ КОД ВНЕ ОБЪЕКТА
 // А ОБЪЕКТ У НАС СОЗДАЕТСЯ ЧЕРЕЗ КЛЮЧЕВОЕ СЛОВО - class

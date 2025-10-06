@@ -1,4 +1,4 @@
-package lesson_2_java_basics_github;
+package practice_java;
 
 public class Tasks {
     public static void main(String[] args) {
