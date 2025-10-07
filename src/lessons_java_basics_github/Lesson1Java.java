@@ -1,6 +1,6 @@
 package lessons_java_basics_github;
 
-public class Lesson_1_java {
+public class Lesson1Java {
     public static void main(String[] args){
         // ОДНОСТРОЧНЫЙ КОММЕНТАРИЙ
         // ЗДЕСЬ БУДЕТ КОД

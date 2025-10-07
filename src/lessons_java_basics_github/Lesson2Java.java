@@ -15,7 +15,7 @@ package lessons_java_basics_github;
 // Дом, Человек, Рабочий, Машина, Камень - ГородскойСуд, МояМашина, ДомЛевый
 // Upper Camel Case, первая бука каждого слова должна писаться с большой буквы
 // House, MyHouse, Staff, StaffMembers, Garden, SoftDeveloperIT
-public class Lesson_2_java {
+public class Lesson2Java {
     // Lower Camel Case - main, get, set, use, run, jump - setValue, getValue, calculate
     // calculateSum, getUserHeight
     public static void main(String[] args){ // method - говорит компилятору, что должен начать с него
