@@ -88,7 +88,7 @@ public class HomeworkFirstLesson {
         ac = ab - ac;
         ab = ab - ac;
         System.out.println("Task #6");
-        System.out.println("Меняем местами вывод значения переменных, с помощью измненеия их значений, при помощи арифметических операторов");
+        System.out.println("Меняем местами вывод значения переменных, с помощью изменения их значений, при помощи арифметических операторов");
         System.out.println("ab = " + ab);
         System.out.println("ac = " + ac);
     }
