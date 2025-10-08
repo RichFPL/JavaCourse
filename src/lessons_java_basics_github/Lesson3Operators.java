@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Lesson3Operators {
     public static void main(String[] args) {
         // CODE
-        getLoop();
+        compareName();
     }
 
     //  Я хочу позволить моему пользователю ввести значение с клавиатуры
@@ -25,7 +25,6 @@ public class Lesson3Operators {
         // будет хранится в локальной переменной
         String name = "Archil";
         Scanner input = new Scanner(System.in);
-
         System.out.print("Please enter name to compare: ");
         String enteredName = input.nextLine();
         System.out.println("You have entered the name: " + enteredName);
