@@ -6,6 +6,9 @@ import java.util.Scanner;
 public class HomeworkThirdLesson {
     public static void main(String[] args) {
 
+        parityResult();
+        outdoorTemperature();
+        getSquares();
         getSumNumber();
     }
 
@@ -22,6 +25,7 @@ public class HomeworkThirdLesson {
             System.out.println("Ваше число " + parity + " чётное");
         } else {
             System.out.println("Ваше число " + parity + " нечётное");
+            System.out.println("-".repeat(50));
         }
     }
 
@@ -39,6 +43,7 @@ public class HomeworkThirdLesson {
             System.out.println("Normal");
         } else if (getTemperature > -5){
             System.out.println("Warm");
+            System.out.println("-".repeat(50));
         }
 
     }
@@ -59,6 +64,7 @@ public class HomeworkThirdLesson {
             System.out.println(cycle);
             cycle = cycle + 7;
         }
+        System.out.println("-".repeat(50));
     }
     //Задача *:
     //Напишите программу, где пользователь вводит любое целое положительное число. А
@@ -69,6 +75,7 @@ public class HomeworkThirdLesson {
         Scanner sumNumber = new Scanner(System.in);
         System.out.println("Введите пожалуйста любое целое положительное число от 1 : ");
         int result = 0;
+
         if(sumNumber.hasNextInt()){
             int a = sumNumber.nextInt();
             if (a >= 1){
@@ -82,7 +89,5 @@ public class HomeworkThirdLesson {
             }
             System.out.println("Сумма всех чисел от 1 до " + a + " равна " + result );
         }
-
-
     }
 }
