@@ -17,16 +17,16 @@ public class HomeworkThirdLesson {
 //будет выводить сообщение четное число или нет. Для определения четности числа
 //используйте операцию получения остатка от деления (операция выглядит так: '% 2').
     public static void parityResult() {
-        System.out.println("Please enter a number");
+        System.out.println("Пожалуйста, введите число, для определения его чётности");
         Scanner resultNumber = new Scanner(System.in);
         int parity = resultNumber.nextInt();
 
         if ((parity % 2) == 0) {
-            System.out.println("Ваше число " + parity + " чётное");
+            System.out.println("Ваше число " + parity + " - чётное");
         } else {
-            System.out.println("Ваше число " + parity + " нечётное");
-            System.out.println("-".repeat(50));
+            System.out.println("Ваше число " + parity + " - нечётное");
         }
+        System.out.println("-".repeat(50));
     }
 
     //Задача 2:
@@ -43,8 +43,8 @@ public class HomeworkThirdLesson {
             System.out.println("Normal");
         } else if (getTemperature > -5){
             System.out.println("Warm");
-            System.out.println("-".repeat(50));
         }
+        System.out.println("-".repeat(50));
 
     }
     //Задача 3:
@@ -54,6 +54,7 @@ public class HomeworkThirdLesson {
         for (int squares = 10; squares <= 20; squares++){
             System.out.println("Квадрат ("+ squares +") :" + Math.pow(squares, degree));
         }
+        System.out.println("-".repeat(50));
     }
     //Задача 4:
     //Необходимо, чтоб программа выводила на экран вот такую последовательность:
