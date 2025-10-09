@@ -1,11 +1,12 @@
 package homework_java;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class HomeworkThirdLesson {
     public static void main(String[] args) {
 
-        getSquares();
+        getSumNumber();
     }
 
     //Задача 1:
@@ -44,7 +45,44 @@ public class HomeworkThirdLesson {
     //Задача 3:
     //Составьте программу, выводящую на экран квадраты чисел от 10 до 20 включительно.
     public static void getSquares(){
-        int a ;
+        int degree = 2;
+        for (int squares = 10; squares <= 20; squares++){
+            System.out.println("Квадрат ("+ squares +") :" + Math.pow(squares, degree));
+        }
+    }
+    //Задача 4:
+    //Необходимо, чтоб программа выводила на экран вот такую последовательность:
+    //7 14 21 28 35 42 49 56 63 70 77 84 91 98. В решении используйте цикл while.
+    public static void  getCycle(){
+        int cycle = 7;
+        while( cycle <=98){
+            System.out.println(cycle);
+            cycle = cycle + 7;
+        }
+    }
+    //Задача *:
+    //Напишите программу, где пользователь вводит любое целое положительное число. А
+    //программа суммирует все числа от 1 до введенного пользователем числа. Для ввода
+    //числа воспользуйтесь классом Scanner. Сделать проверку, чтобы пользователь не мог
+    //ввести некорректные данные.
+    public static void getSumNumber(){
+        Scanner sumNumber = new Scanner(System.in);
+        System.out.println("Введите пожалуйста любое целое положительное число от 1 : ");
+        int result = 0;
+        if(sumNumber.hasNextInt()){
+            int a = sumNumber.nextInt();
+            if (a >= 1){
+                System.out.println("Вы ввели число " + a );
+            }else if(a<1){
+                System.out.println("Вы ввели некоректное число");
+                return;
+            }
+            for (int b = 1; b<=a; b++){
+                result+=b;
+            }
+            System.out.println("Сумма всех чисел от 1 до " + a + " равна " + result );
+        }
+
 
     }
 }
