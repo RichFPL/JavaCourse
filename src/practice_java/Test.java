@@ -1,38 +1,33 @@
 package practice_java;
 
-import java.sql.SQLOutput;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Test {
     public static void main(String[] args){
-        useMathLibrary();
-
+       extendArray();
     }
 
+    public static void extendArray(){
+        int[] best = new int[]{-1, 5, 10, 15, -5, 8};
+        int[] theBest = new int[best.length + 10];
+        for(int index = 9, bestIndex = 0; bestIndex<best.length; index++, bestIndex++){
+            theBest[index] = best[bestIndex];
+        }
+
+        for(int index = 0; index < theBest.length; index++){
+            System.out.println("New names[" + index + "]: " + theBest[index] );
+        }
+    }
 
     public static void useMathLibrary(){
-        // Class Math - библиотека для математических операций
-        // Math.____
-        // Math.floor() - округляет число правильно, что с обойх сторон возможность округления было равным
-        // Math.round() - округляет тупо, по простому 4.567 - 4.6
-        // Math.random() - случайное число, но возвращает тип double - 0.01 по 0.9999
-        // Надо знать формулу, которая будет возвращать уже целочисленное значение
 
-        // ПОСМОТРЕТЬ: int randomNumber = (int) (Math.random() * (max - min + 1)) + min;
-        for (int counter = 1; counter <= 10; counter++){
-            System.out.println((int) (Math.random() * 10)); // А что если я хочу: от 101 по 201 ???
-        }
-
-        System.out.println("-".repeat(50));
-
-        for (int helis = 10; helis <=20; helis++){
-            System.out.println("Sqrt("+ helis + "): " + Math.sqrt(helis));
-        }
-
-        for (int dou = 20; dou <= 100; dou+=10) {
-            System.out.println("Sum(" + dou + ") : " + Math.sqrt(dou));
+        String[] names = new String[]{"Vladik", "Lizka","Dimka","Tomka","Vovka"};
+        for (int index = 0; index < names.length; index++){
+            System.out.println("Your name is " + names[index]);
         }
     }
+
 
 
 }
