@@ -21,8 +21,7 @@ public class HomeworkFourLessonFourthLesson {
         System.out.println("Введите длину массива");
         int importNumbers = numberScanner.nextInt();
         int[] array = new int[importNumbers];
-        System.out.println("Ваш массив состоит из " + importNumbers + " элементов, и выглядит на данный " +
-                "момент вот так: " + Arrays.toString(array));
+        System.out.println("Ваш массив состоит из " + importNumbers + " элементов");
 
         for (int index = 0; index < array.length; index++) {
             array[index] = ((int) (Math.random() * 10));
@@ -97,12 +96,46 @@ public class HomeworkFourLessonFourthLesson {
         for (int zero = 0; zero < array.length; zero++) {
             if (array[zero] == 0) {
                 zeroCount++;
-                System.out.println("Количество нулевых элементов в массиве: " + zeroCount);
-            } else {
-                System.out.println("Нулевых элементов в массиве не найдено");
+            }
+
+        }
+        if(zeroCount>0){
+            System.out.println("Количество нулевых элементов в массиве: " + zeroCount);
+    } else {
+        System.out.println("Нулевых элементов в массиве не найдено");
+    }
+        System.out.println("-".repeat(50));
+
+        //Задача 5:
+        //Пройти по массиву и поменять местами элементы первый и последний, второй и
+        //предпоследний и т.д.
+        int start = array[0];
+        int over = array[array.length-1];
+
+        for (int indexStart = array[0]; indexStart< array.length; indexStart++) {
+        }
+        for (int indexOver = array[array.length-1]; indexOver>=0; indexOver--){
+        }
+
+
+        //Задача 6:
+        //Проверить, является ли массив возрастающей последовательностью (каждое следующее
+        //число больше предыдущего).
+        System.out.println(Arrays.toString(array));
+
+        boolean subsequence = true;
+        for (int i = 1; i < array.length; i++) {
+            if(array[i]<=array[i-1]){
+                subsequence = false;
+                break;
             }
         }
-        //Доработать вывод сообщений
+        if(subsequence){
+            System.out.println("Массив является строго возрастающей последовательностью");
+        } else {
+            System.out.println("Массив не является строго возрастающей последовательностью");
+        }
+
     }
 }
 
