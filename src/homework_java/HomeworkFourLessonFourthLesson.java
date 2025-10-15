@@ -61,7 +61,7 @@ public class HomeworkFourLessonFourthLesson {
         //Задача 3:
         //Найти индексы минимального и максимального элементов и вывести в консоль.
 
-        System.out.println("Индекс минимального элемента массива: ");
+        System.out.println("Индекс минимального и максимального элементов в массиве : ");
         int indexMin = Array.IndexOf(array, min);
         int indexMax = Array.IndexOf(array, max);
 
