@@ -48,22 +48,30 @@ public class HomeworkFourLessonFourthLesson {
         //Задача 2:
         //Найти минимальный-максимальный элементы и вывести в консоль.
 
-        System.out.println("Максимальный элемент в массиве: ");
-        int max = Arrays.stream(array).max().getAsInt();
-        System.out.println(max);
+        int maxMax = array[0];
+        for(int i = 0; i< array.length;i++){
+            if(array[i]>maxMax){
+                maxMax = array[i];
+            }
+        }
+        System.out.println("Значение максимального элемента массива: " + maxMax);
 
-        System.out.println("Минимальный элемент в массиве");
-        int min = Arrays.stream(array).min().getAsInt();
-        System.out.println(min);
+        int minMin = array[0];
+        for(int b = 0; b< array.length;b++){
+            if(array[b]<minMin){
+                minMin = array[b];
+            }
+        }
+        System.out.println("Значение минимального элемента массива: " + minMin);
 
         System.out.println("-".repeat(50));
 
         //Задача 3:
         //Найти индексы минимального и максимального элементов и вывести в консоль.
 
+
+
         System.out.println("Индекс минимального и максимального элементов в массиве : ");
-        int indexMin = Array.IndexOf(array, min);
-        int indexMax = Array.IndexOf(array, max);
 
 
 
