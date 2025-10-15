@@ -58,6 +58,15 @@ public class HomeworkFourLessonFourthLesson {
 
         System.out.println("-".repeat(50));
 
+        //Задача 3:
+        //Найти индексы минимального и максимального элементов и вывести в консоль.
+
+        System.out.println("Индекс минимального элемента массива: ");
+        int indexMin = Array.IndexOf(array, min);
+        int indexMax = Array.IndexOf(array, max);
+
+
+
         //Задача 4:
         //Найти и вывести количество нулевых элементов. Если нулевых элементов нет - вывести
         //сообщение, что их нет.
