@@ -1,7 +1,6 @@
 package homework_java;
 
-import java.lang.reflect.Array;
-import java.sql.SQLOutput;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -48,31 +47,47 @@ public class HomeworkFourLessonFourthLesson {
         //Задача 2:
         //Найти минимальный-максимальный элементы и вывести в консоль.
 
-        int maxMax = array[0];
+        int max = array[0];
         for(int i = 0; i< array.length;i++){
-            if(array[i]>maxMax){
-                maxMax = array[i];
+            if(array[i]>max){
+                max = array[i];
             }
         }
-        System.out.println("Значение максимального элемента массива: " + maxMax);
+        System.out.println("Значение максимального элемента массива: " + max);
 
-        int minMin = array[0];
+        int min = array[0];
         for(int b = 0; b< array.length;b++){
-            if(array[b]<minMin){
-                minMin = array[b];
+            if(array[b]<min){
+                min = array[b];
             }
         }
-        System.out.println("Значение минимального элемента массива: " + minMin);
+        System.out.println("Значение минимального элемента массива: " + min);
 
         System.out.println("-".repeat(50));
 
         //Задача 3:
         //Найти индексы минимального и максимального элементов и вывести в консоль.
 
+        int indexMin = -1;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == min) {
+                indexMin = i;
+                break;
+            }
+        }
+        System.out.println("Индекс минимального элемента массива : " + indexMin);
+
+        int indexMax = -1;
+        for (int k = 0; k< array.length; k++){
+            if (array[k] == max) {
+                indexMax = k;
+                break;
+            }
+        }
+        System.out.println("Индекс максимального элемента массива : " + indexMax);
 
 
-        System.out.println("Индекс минимального и максимального элементов в массиве : ");
-
+        System.out.println("-".repeat(50));
 
 
         //Задача 4:
