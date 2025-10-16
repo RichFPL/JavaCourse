@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class HomeworkFiveLesson {
     public static void main(String[] args){
-        getMassive();
+        getChess();
     }
 
     public static void getMassive(){
@@ -59,7 +59,16 @@ public class HomeworkFiveLesson {
     //B W B W B W B W
 
     public static void getChess(){
-        int[][] = new int[8][8];
-
+        String[][] chess = new String[8][8];
+        for(int i = 0; i< chess.length; i++){
+            for(int j = 0; j<chess[0].length;j++){
+                if((i+j)%2 == 0){
+                    System.out.println(chess[i][j] + "W");
+                }else{
+                    System.out.println(chess[i][j] + "B");
+                }
+            }
+        }
     }
+
 }
