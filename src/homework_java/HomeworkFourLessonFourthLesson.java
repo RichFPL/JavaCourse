@@ -109,14 +109,22 @@ public class HomeworkFourLessonFourthLesson {
         //Задача 5:
         //Пройти по массиву и поменять местами элементы первый и последний, второй и
         //предпоследний и т.д.
-        int start = array[0];
-        int over = array[array.length-1];
 
-        for (int indexStart = array[0]; indexStart< array.length; indexStart++) {
-        }
-        for (int indexOver = array[array.length-1]; indexOver>=0; indexOver--){
+        for ( int i = array.length-1; i>=importNumbers/2; i--){
+            int dividedElements = array[i];
+            if (array[i] == dividedElements){
+            }
+            System.out.println(dividedElements);
         }
 
+        for(int i = importNumbers-4; i >= 0; i--){
+            int lastPartElements = array[i];
+            if (array[i] == lastPartElements){
+
+            }
+            System.out.println(lastPartElements);
+        }
+        System.out.println();
 
         //Задача 6:
         //Проверить, является ли массив возрастающей последовательностью (каждое следующее
