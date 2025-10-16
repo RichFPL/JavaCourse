@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class HomeworkFiveLesson {
     public static void main(String[] args){
+        getMassive();
         getChess();
     }
 
@@ -24,7 +25,7 @@ public class HomeworkFiveLesson {
             }
         }
 
-        System.out.println("Введённые вами значение: ");
+        System.out.println("Введённые вами значения: ");
 
         for(int i = 0; i<rows; i++){
             for(int j = 0; j<cols; j++){
@@ -43,7 +44,9 @@ public class HomeworkFiveLesson {
             }
         }
         System.out.println(sum);
+        System.out.println("-".repeat(50));
     }
+
     //Задача 2:
     //Создать программу для раскраски шахматной доски с помощью цикла. Создать
     //двумерный массив String 8х8. С помощью циклов задать элементам массива значения
