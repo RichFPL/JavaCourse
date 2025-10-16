@@ -61,13 +61,19 @@ public class HomeworkFiveLesson {
     public static void getChess(){
         String[][] chess = new String[8][8];
         for(int i = 0; i< chess.length; i++){
-            for(int j = 0; j<chess[0].length;j++){
+            for(int j = 0; j<chess[i].length;j++){
                 if((i+j)%2 == 0){
-                    System.out.println(chess[i][j] + "W");
+                    chess[i][j]="W";
                 }else{
-                    System.out.println(chess[i][j] + "B");
+                    chess[i][j]="B";
                 }
             }
+        }
+        for(int i = 0; i< chess.length; i++) {
+            for (int j = 0; j < chess[i].length; j++) {
+                System.out.print(chess[i][j] +"\t");
+            }
+            System.out.println();
         }
     }
 
