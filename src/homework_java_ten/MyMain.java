@@ -11,6 +11,7 @@ public class MyMain {
     public static void createPerson(){
         Person person = new Person("John","Fabos","Java-developer",24);
         Person person2 = new Person("John","Fabos","Java-developer",24);
+        Person person3 = new Person("John","Fabos","Java-developer",24);
         System.out.println("Переопределённый метод toString:");
         System.out.println(person);
 
@@ -20,7 +21,16 @@ public class MyMain {
         System.out.println("Хэш код объекта: " + hashCode);
 
         System.out.println("-".repeat(50));
-        System.out.println("Стандартная реализация метода equals");
+        System.out.println("Переопределенный метода equals: ");
+        System.out.println("Сравнение person и person2 : ");
+        boolean equal = person.equals(person2);
+        System.out.println(equal);
+        System.out.println("Сравнение person2 и person3: ");
+        boolean equalTwo = person2.equals(person3);
+        System.out.println(equalTwo);
+
+        System.out.println("-".repeat(50));
+
 
     }
 
