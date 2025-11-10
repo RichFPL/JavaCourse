@@ -1,6 +1,9 @@
 package homework_java_11;
 
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
+
 //1. Ввести 3 строки с консоли, найти самую короткую и самую длинную строки. Вывести
 //найденные строки и их длину.
 //2. Ввести 3 строки с консоли. Упорядочить и вывести строки в порядке возрастания
@@ -13,7 +16,11 @@ import java.util.Scanner;
 //начальной строки. Например, "Hello" -> "HHeelllloo".
 public class MyMain {
     public static void main(String[] args){
-        getAverageLengthString();
+        shortAndLongLine();
+        //+getAscendingOrder();
+        //+getAverageLengthString();
+        //+getDifference();
+        //+getRepeat();
     }
     //1. Ввести 3 строки с консоли, найти самую короткую и самую длинную строки. Вывести
     //найденные строки и их длину.
@@ -83,16 +90,68 @@ public class MyMain {
         int string2Length = string2.length();
         int string3Length = string3.length();
         int averageLength = (string1Length + string2Length + string2Length)/3;
-        System.out.println("Строки, длина которых меньше средней: " + averageLength);
+        System.out.println("Строки, длина которых меньше средней длины: " + averageLength);
         if(string1Length < averageLength){
-            System.out.println(string1);
+            System.out.println(string1 + " - длина строки " + string1Length);
         }
         if(string2Length < averageLength){
-            System.out.println(string2);
+            System.out.println(string2 + " - длина строки " + string2Length);
         }
         if(string3Length < averageLength){
-            System.out.println(string3);
+            System.out.println(string3 + " - длина строки " + string3Length);
         }
+        System.out.println("-".repeat(50));
+    }
+    //4. Ввести 3 строки с консоли. Найти слово, состоящее только из различных символов.
+    //Если таких слов несколько, найти первое из них.
+    public static void getDifference(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Задание 4");
+        System.out.println("Введите 3 слова : ");
+        String string1 = scanner.nextLine();
+        String string2 = scanner.nextLine();
+        String string3 = scanner.nextLine();
+        String combinedString = string1 + " " + string2 + " " + string3;
+        String[] words = combinedString.split("\\s+");
+        String firstUniqueWord = null;
+        for (String word : words) {
+            if (!word.isEmpty() && hasUniqueChars(word)) {
+                firstUniqueWord = word;
+                break;
+            }
+        }
+        if (firstUniqueWord != null) {
+            System.out.println("Первое слово с различными символами: " + firstUniqueWord);
+        } else {
+            System.out.println("Слов с различными символами не найдено.");
+        }
+    }
+
+    public static boolean hasUniqueChars(String word) {
+        Set<Character> seenChars = new HashSet<>();
+        for (char c : word.toCharArray()) {
+            if (!seenChars.add(c)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    //5. Вывести на консоль новую строку, которой задублирована каждая буква из
+    //начальной строки. Например, "Hello" -> "HHeelllloo".
+
+    public static void getRepeat(){
+        System.out.println("-".repeat(50));
+        System.out.println("Задание 5 ");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите слово:");
+        String string = scanner.nextLine();
+        StringBuilder resultBuilder = new StringBuilder();
+        for (char c : string.toCharArray()) {
+            resultBuilder.append(c);
+            resultBuilder.append(c);
+        }
+        System.out.println("Ваше слово с задвоенными буквами : " + resultBuilder.toString());
 
     }
 }
