@@ -17,9 +17,10 @@ public class MyMain {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите строку для поиска аббревиатуры:");
         String inputLine = scanner.nextLine();
-        //"[0-9]{2,4}");
 
-        Pattern pattern = Pattern.compile("[a-zа-я]{2,6}");
+        String regex = "\\b[A-ZА-Я]{2,6}\\b";
+
+        Pattern pattern = Pattern.compile(regex, Pattern.UNICODE_CHARACTER_CLASS);
         Matcher matcher = pattern.matcher(inputLine);
 
         boolean found = false;
