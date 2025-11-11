@@ -15,9 +15,27 @@ public class MyMain {
 
     public static void finderAbbreviation(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите строку для поиска аббревиатур:");
+        System.out.println("Введите строку для поиска аббревиатуры:");
         String inputLine = scanner.nextLine();
-        scanner.close();
+        //"[0-9]{2,4}");
 
+        Pattern pattern = Pattern.compile("[a-zа-я]{2,6}");
+        Matcher matcher = pattern.matcher(inputLine);
+
+        boolean found = false;
+
+        StringBuilder results = new StringBuilder();
+
+        while (matcher.find()) {
+            results.append(matcher.group()).append("\n");
+            found = true;
+        }
+
+        if (found) {
+            System.out.println("Найденные аббревиатуры:");
+            System.out.println(results.toString());
+        } else {
+            System.out.println("Аббревиатуры, соответствующие критериям, не найдены.");
+        }
     }
 }
