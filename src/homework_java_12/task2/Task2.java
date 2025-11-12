@@ -19,9 +19,7 @@ public class Task2 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите произвольный текст:");
         String inputText = scanner.nextLine();
-        scanner.close();
 
-        // Поиск и вывод информации
         findAndPrintDocumentNumbers(inputText);
         findAndPrintEmails(inputText);
         findAndPrintPhoneNumbers(inputText);
@@ -38,8 +36,6 @@ public class Task2 {
     }
 
     public static void findAndPrintEmails(String text) {
-        // Паттерн: набор символов, @, набор символов, точка, домен
-        // Этот паттерн достаточно общий для большинства email
         String regex = "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}\\b";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(text);
@@ -50,7 +46,6 @@ public class Task2 {
     }
 
     public static void findAndPrintPhoneNumbers(String text) {
-        // Паттерн: +, (, 2 цифры, ), 7 цифр
         String regex = "\\+\\(\\d{2}\\)\\d{7}";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(text);
