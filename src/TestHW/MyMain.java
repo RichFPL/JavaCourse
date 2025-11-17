@@ -1,42 +1,37 @@
 package TestHW;
 
-import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
-//Задача 1:
-//Вывести в консоль из строки которую пользователь вводит с клавиатуры все
-//аббревиатуры. Аббревиатурой будем считать слово от 2 до 6 символов, состоящее
-//только из прописных букв, без чисел.
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Date;
+
 public class MyMain {
     public static void main(String[] args) {
-        finderAbbreviation();
+        testReg();
     }
 
-    public static void finderAbbreviation() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите строку :");
+    public static void testReg(){
+        int a = 10;
+        int b = 0;
+        File exceptions = new File("src/TestHW/exceptions.txt");
 
-        String text = scanner.nextLine();
-        String patternText = "\\b[a-zа-яё]{2,4}\\b";
+        try {
+            System.out.println(a / b);
+        } catch (ArithmeticException e) {
+            System.out.println("Произошла ошибка, идёт запись в файл");
 
-        Pattern pattern = Pattern.compile(patternText, Pattern.UNICODE_CHARACTER_CLASS);
-        Matcher matcher = pattern.matcher(text);
-
-        boolean find = false;
-
-        StringBuilder results = new StringBuilder();
-
-        while(matcher.find()){
-            results.append(matcher.group()).append("\n");
-            find = true;
-        }
-
-        if (find){
-            System.out.println("Ваши аббревиатуры");
-            System.out.println(results.toString());
-        }else{
-            System.out.println("Нет аббревиатур");
+            try {
+                try (FileWriter fw = new FileWriter(exceptions)) {
+                    fw.write(new Date() + " MISTAKE. EXCEPTION SAYS: " + e.getMessage() + "\n");
+                }
+                System.out.println("Ошибка успешно записана в файл.");
+            } catch (IOException ioException) {
+                System.err.println("Критическая ошибка: не удалось записать в лог-файл!");
+                ioException.printStackTrace();
+            }
         }
     }
+
+
 }
