@@ -1,0 +1,5 @@
+Exception Hierarchy in Java:
+In the java exception class hierarchy, the class at the top is the Throwable class,
+which is a direct subclass of the Object class. Throwable has two direct subclasses Exception
+and Error, which has again respective sub-classes The diagram below shows the standard exception
+and error classes defined in Java.
