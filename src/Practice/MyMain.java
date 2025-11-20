@@ -1,10 +1,7 @@
 package Practice;
 
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.util.ArrayList;
 
 public class MyMain {
     public static void main(String[] args){
@@ -12,30 +9,12 @@ public class MyMain {
     }
 
     public static void testFile(){
-        try(FileReader fileReader = new FileReader("src/Practice/message.txt")){
-            int character;
-            while((character = fileReader.read()) != -1){
-                System.out.print((char) character);
-            }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
-        try(FileWriter fileWriter = new FileWriter("src/Practice/message.txt")){
-            fileWriter.write("Hello world");
-            fileWriter.flush();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
-        try(FileReader fileReader = new FileReader("src/Practice/message.txt")){
-            int character;
-            while((character = fileReader.read()) != -1){
-                System.out.print((char) character);
-            }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        ArrayList<Integer> numbers = new ArrayList<>();
+        numbers.add(5);
+        numbers.add(10);
+        numbers.add(15);
+        numbers.add(20);
+        Integer [] array = numbers.toArray(new Integer[numbers.size()]);
 
     }
 }
