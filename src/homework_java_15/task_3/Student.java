@@ -17,26 +17,6 @@ public class Student {
         this.grades = grades;
     }
 
-    public String getName(){
-        return name;
-    }
-
-    public String getGroup(){
-        return group;
-    }
-
-    public int getCourse(){
-        return course;
-    }
-
-    public List<Integer>getGrades(){
-        return grades;
-    }
-
-    public void setCourse(int course){
-        this.course = course;
-    }
-
     public double getAverageGrades(){
         if(grades == null || grades.isEmpty()){
             return 0.0;
