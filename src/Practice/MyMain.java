@@ -10,11 +10,12 @@ public class MyMain {
 
     public static void testFile(){
         ArrayList<Integer> numbers = new ArrayList<>();
-        numbers.add(5);
-        numbers.add(10);
         numbers.add(15);
-        numbers.add(20);
-        Integer [] array = numbers.toArray(new Integer[numbers.size()]);
-
+        numbers.add(10);
+        numbers.add(5);
+        numbers.add(1);
+        System.out.println(numbers.size());
+        System.out.println(numbers.get(0));
+        System.out.println(numbers);
     }
 }
