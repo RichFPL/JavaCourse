@@ -2,6 +2,10 @@ package Practice;
 
 
 import java.util.ArrayList;
+//Система оплаты
+//Вам нужно создать простую систему, которая умеет обрабатывать
+// платежи разными способами (например, через Банковскую карту и через PayPal).
+//Цель: Создать интерфейс PaymentProcessor, который определяет единый метод для оплаты, независимо от ее способа.
 
 public class MyMain {
     public static void main(String[] args){
@@ -9,13 +13,6 @@ public class MyMain {
     }
 
     public static void testFile(){
-        ArrayList<Integer> numbers = new ArrayList<>();
-        numbers.add(15);
-        numbers.add(10);
-        numbers.add(5);
-        numbers.add(1);
-        System.out.println(numbers.size());
-        System.out.println(numbers.get(0));
-        System.out.println(numbers);
+
     }
 }
