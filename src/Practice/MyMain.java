@@ -1,24 +1,19 @@
 package Practice;
 
-//Создать систему для вычисления площади
-// геометрических фигур (круга и прямоугольника) и
-// использовать полиморфизм через интерфейс для обработки их в общем списке.
-
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.TreeSet;
-
+//Задача 1:
+//Создать класс CreditCard c полями номер счета, текущая сумма на счету. Добавьте
+//метод, который позволяет начислять сумму на кредитную карточку. Добавьте метод,
+//который позволяет снимать с карточки некоторую сумму. Добавьте метод, который
+//выводит текущую информацию о карточке. Напишите программу, которая создает три
+//объекта класса CreditCard у которых заданы номер счета и начальная сумма.
+//Тестовый сценарий для проверки: Положите деньги на первые две карточки и снимите с
+//третьей. Выведите на экран текущее состояние всех трех карточек.
 public class MyMain {
     public static void main(String[] args) {
-        createString();
-    }
-
-    public static void createString() {
-        TreeSet<Integer> counts = new TreeSet<>();
-        counts.add(5);
-        counts.add(2);
-        counts.add(10);
-        counts.add(1);
-        System.out.println(counts);
+        CreditCard person1 = new CreditCard(32132,4500);
+        CreditCard person2 = new CreditCard(32141,3000);
+        CreditCard person3 = new CreditCard(321535,7000);
+        person1.getMoney(4700);
+        person1.aboutCard();
     }
 }
